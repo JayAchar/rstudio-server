@@ -19,3 +19,9 @@ install:
 
 script:
   - docker ps | grep -q shiny
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
