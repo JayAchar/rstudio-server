@@ -16,7 +16,7 @@ install:
   - docker run -d -p 127.0.0.1:8787:8787 --name rs -e USER=test_user -e PASSWORD=pwd123 rstudio-ja
 
 script:
-  - docker ps | grep -q shiny
+  - docker ps | grep -q rs
 
 deploy:
   provider: script
