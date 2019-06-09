@@ -12,8 +12,8 @@ r:
   - devel
 
 install:
-  - docker build -t rstudio-ja .
-  - docker run -d -p 127.0.0.1:8787:8787 --name rs -e USER=test_user -e PASSWORD=pwd123 rstudio-ja
+  - docker build -t zchas39/rstudio-server .
+  - docker run -d -p 127.0.0.1:8787:8787 --name rs -e USER=test_user -e PASSWORD=pwd123 zchas39/rstudio-server
 
 script:
   - docker ps | grep -q rs
