@@ -1,0 +1,21 @@
+language: r
+
+services:
+  - docker
+
+os:
+  - linux
+
+r:
+  - oldrel
+  - release
+  - devel
+
+install:
+  - docker build -t rstudio-ja .
+  - docker run -d -p 127.0.0.1:8787:8787 --name rs \
+  -e USER=test_user -e PASSWORD=pwd123 \
+  rstudio-ja
+
+script:
+  - docker ps | grep -q shiny
