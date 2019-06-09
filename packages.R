@@ -2,4 +2,3 @@
 
 install.packages("naniar", repos = "http://cran.us.r-project.org")
 install.packages("shinydashboard", repos = "http://cran.us.r-project.org")
-install.packages("devtools", repos = "http://cran.us.r-project.org")
