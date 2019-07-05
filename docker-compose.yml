@@ -1,0 +1,13 @@
+version: "3"
+services:
+    rstudio:
+        image: zchas39/rstudio-server
+        container_name: rstudio
+        ports:
+            - "8787:8787"
+        environment:
+            USER: test_user
+            PASSWORD: pwd1234
+        restart: always
+        volumes:
+            - ./data_raw:/home/mydata
