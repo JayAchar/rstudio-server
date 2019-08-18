@@ -8,6 +8,6 @@ services:
         environment:
             USER: test_user
             PASSWORD: pwd1234
-        restart: always
+        restart: on_failure
         volumes:
             - ./data_raw:/home/mydata
